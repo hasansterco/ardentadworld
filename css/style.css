@@ -1,0 +1,220 @@
+:root {
+    --primary-text-color: #456707;
+    --primary-background-color: #ED3237;
+    --primary-font-family: 'Barlow';
+    --secondary-text-color: #fff;
+    --secondary-background-color: #ffd525;
+    --secondary-font-family: 'Roboto';
+    --relate-text-color: #91d8f7;
+    --relate-background-color: #006cb5;
+    --relate-font-family: 'Open Sans';
+    --default-bg-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.02em;
+}
+a, a:hover {
+    text-decoration: none !important;
+}
+p {
+    font-size: 16px;
+    line-height: 26px;
+}
+.mainHome {
+    background-image: url('../images/heroImage.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+nav .ul {
+    list-style: none;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav .ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    padding: 4px 26px;
+    display: inline-block;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+nav .ul li a:hover {
+    background-image: url('../images/icons/hoverBg.png');
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    color: var(--secondary-text-color);
+}
+
+.text-wrapper h1 {
+    font-size: 82px;
+    line-height: 74px;
+    color: #fff;
+}
+.backgroudImage img {
+    position: relative;
+    z-index: 2;
+    margin-top: 25px;
+}
+
+.backgroudImage::after {
+    content: url('../images/icons/logoBackground.png');
+    position: absolute;
+    right: 0;
+    top: -3px;
+}
+
+.text-wrapper h1 span {
+    font-size: 45px;
+}
+
+.textGreen {
+    color: #7cad2f;
+}
+.text-wrapper {
+    padding-top: 75px;
+}
+
+.homeFooter {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+.homeFooter .footerText {
+    width: 100%;   
+    padding: 10px 0; 
+}
+
+.footerText {
+    background-color: #ffffffc4;
+    position: relative;
+}
+
+.footerText:after {
+    content: "";
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-top: 110px solid #ffffffc4;
+    left: -50px;
+    top: 0;
+}
+
+.footerText h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+.toggleBtn {
+    display: block;
+}
+
+button.toggleBtn {
+    background-color: #fff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    line-height: 14px;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+button.toggleBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width:769px) {
+    .homeFooter .socialIcons, .homeFooter .footerText {
+        width: 50%;
+    }
+
+    .socialIcons a {
+        display: inline-block;
+    }
+    
+    .socialIcons a:not(:last-child) {
+        margin-right: 10px;
+    }
+    .toggleBtn {
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    header.navigation nav {
+        display: none;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        bottom: -223px;
+        z-index: 9;
+    }
+    
+    nav .ul {
+        flex-direction: column;
+    }
+    
+    nav .ul li a {
+        padding: 8px 20px;
+    }
+    .text-wrapper h1 {
+        font-size: 45px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .text-wrapper h1 span {
+        font-size: 45px;
+    }
+    .backgroudImage img {
+        width: 100px;
+    }
+    .backgroudImage::after {
+        display: none;
+    }
+
+    .footerText h2 {
+        font-size: 20px;
+    }
+    .socialIcons {
+        position: fixed;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        display: flex;
+        top: 316px;
+        padding: 15px 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    .socialIcons a:not(:first-child) {
+        margin-top: 8px;
+    }
+}
